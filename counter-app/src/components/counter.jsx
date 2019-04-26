@@ -11,13 +11,21 @@ class Counter extends Component{
       fontSize : 20,
       fontWeight: 'bold'
     };
+
+    renderTags(){
+        if (this.state.count === 0) return "There is no tags !"
+        return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>;
+    };
+
     render() {
         return (
         <div>
             {/*<img src={this.state.imageUrl} alt=''></img>*/}
-            <span style={this.style} className={this.getBadgeClassess()}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
-            <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+            {/*<span style={this.style} className={this.getBadgeClassess()}>{this.formatCount()}</span>*/}
+            {/*<button className="btn btn-secondary btn-sm">Increment</button>*/}
+
+            {this.state.count === 0 && "Please create a tag!"}
+            {this.renderTags()}
         </div>
         );
 

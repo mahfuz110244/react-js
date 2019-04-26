@@ -83,6 +83,6 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-.idea
+*.idea
 package.json
 package-lock.json
