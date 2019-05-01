@@ -1,6 +1,19 @@
 import React, { Component} from 'react';
 
 class Counter extends Component{
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("prevPops", prevProps);
+        console.log("prevState", prevState);
+        if (prevProps.counter.value !== this.props.counter.value){
+        //    Ajax call and get data from the server
+        }
+    }
+
+    componentWillUnmount() {
+        console.log("Counter - Unmount");
+    }
+
     // state = {
     //     value: this.props.counter.value,
     //     tags : ["tag1", "tag2", "tag3"]
