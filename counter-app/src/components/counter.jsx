@@ -33,6 +33,7 @@ class Counter extends Component{
     // };
 
     render() {
+        console.log("Counter - Rendered")
         console.log("props", this.props)
         return (
         <div>
